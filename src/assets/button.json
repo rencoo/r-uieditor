@@ -1,0 +1,27 @@
+{
+  "type": "uieditor-div",
+  "children": [
+    {
+      "type": "Button",
+      "children": [
+        {
+          "type": "Icon",
+          "props": {
+            "class": "mr-sm",
+            "type": "ios-heart-outline"
+          }
+        },
+        {
+          "type": "uieditor-text",
+          "props": {
+            "text": "文本内容"
+          }
+        }
+      ],
+      "props": {
+        "class": "mr-sm",
+        "@click": "onButtonClick"
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "type": "uieditor-div",
+  "children": [
+    {
+      "type": "uieditor-div",
+      "children": [
+        {
+          "children": [
+            {
+              "type": "uieditor-text",
+              "props": {
+                "text": "Checkbox",
+                "ue-cant-move": true
+              }
+            }
+          ],
+          "type": "Checkbox",
+          "props": {
+            "v-model": "singleCheckbox",
+            "label": "1",
+            "@on-change": "onSingleCheckboxChange"
+          }
+        }
+      ]
+    },
+    {
+      "children": [
+        {
+          "type": "uieditor-span",
+          "children": [
+            {
+              "type": "uieditor-text",
+              "props": {
+                "text": "分割线",
+                "ue-cant-move": true
+              }
+            }
+          ]
+        }
+      ],
+      "type": "Divider"
+    },
+    {
+      "type": "CheckboxGroup",
+      "props": {
+        "v-model": "multiCheckbox",
+        "@on-change": "onMultiCheckboxChange"
+      },
+      "children": [
+        {
+          "type": "Checkbox",
+          "children": [
+            {
+              "type": "uieditor-text",
+              "props": {
+                "text": "苹果",
+                "ue-cant-move": true
+              }
+            }
+          ],
+          "props": {
+            "label": "0"
+          }
+        },
+        {
+          "type": "Checkbox",
+          "children": [
+            {
+              "type": "uieditor-text",
+              "props": {
+                "text": "香蕉",
+                "ue-cant-move": true
+              }
+            }
+          ],
+          "props": {
+            "label": "1"
+          }
+        },
+        {
+          "type": "Checkbox",
+          "children": [
+            {
+              "type": "uieditor-text",
+              "props": {
+                "text": "猕猴桃",
+                "ue-cant-move": true
+              }
+            }
+          ],
+          "props": {
+            "label": "2"
+          }
+        }
+      ]
+    }
+  ]
+}

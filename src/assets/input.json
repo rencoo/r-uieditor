@@ -1,0 +1,18 @@
+{
+  "type": "uieditor-div",
+  "children": [
+    {
+      "type": "Input",
+      "props": {
+        "v-model": "inputData",
+        "type": "text",
+        "@on-click": "onInputClick",
+        "@on-change": "onInputChange",
+        "@on-focus": "onInputFocus",
+        "@on-blur": "onInputBlur",
+        "@on-keyup": "onInputKeyup",
+        "@on-keydown": "onInputKeydown"
+      }
+    }
+  ]
+}

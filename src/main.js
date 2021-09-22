@@ -5,6 +5,11 @@ import iView from 'iview'
 import VueUieditor from 'vue-uieditor'
 import { IViewUieditor } from 'iview-uieditor'
 // import 'iview/dist/styles/iview.css';
+import components from './components';
+
+components.forEach(component => {
+  Vue.component(component.name, component);
+});
 
 Vue.use(iView)
 Vue.use(VueUieditor)

@@ -1,0 +1,103 @@
+{
+  "type": "uieditor-div",
+  "children": [
+    {
+      "type": "uieditor-div",
+      "children": [
+        {
+          "type": "Radio",
+          "children": [
+            {
+              "type": "uieditor-text",
+              "props": {
+                "text": "Radio",
+                "ue-cant-move": true
+              }
+            }
+          ],
+          "props": {
+            "v-model": "singleRadio",
+            "label": "1",
+            "@on-change": "onSingleRadioChange"
+          }
+        }
+      ]
+    },
+    {
+      "children": [
+        {
+          "type": "uieditor-span",
+          "children": [
+            {
+              "type": "uieditor-text",
+              "props": {
+                "text": "分割线",
+                "ue-cant-move": true
+              }
+            }
+          ]
+        }
+      ],
+      "type": "Divider"
+    },
+    {
+      "type": "uieditor-div",
+      "children": [
+        {
+          "type": "RadioGroup",
+          "props": {
+            "v-model": "multiRadio",
+            "@on-change": "onMultiRadioChange"
+          },
+          "children": [
+            {
+              "type": "Radio",
+              "children": [
+                {
+                  "type": "uieditor-text",
+                  "props": {
+                    "text": "a",
+                    "ue-cant-move": true
+                  }
+                }
+              ],
+              "props": {
+                "label": "a"
+              }
+            },
+            {
+              "type": "Radio",
+              "children": [
+                {
+                  "type": "uieditor-text",
+                  "props": {
+                    "text": "b",
+                    "ue-cant-move": true
+                  }
+                }
+              ],
+              "props": {
+                "label": "b"
+              }
+            },
+            {
+              "type": "Radio",
+              "children": [
+                {
+                  "type": "uieditor-text",
+                  "props": {
+                    "text": "c",
+                    "ue-cant-move": true
+                  }
+                }
+              ],
+              "props": {
+                "label": "c"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

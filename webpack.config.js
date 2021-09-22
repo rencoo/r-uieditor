@@ -2,6 +2,11 @@ var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var config = {
+  resolve: {
+    alias: {
+      components: path.resolve(__dirname, './src/components'),
+    },
+  },
   entry: {
     main: './src/main'
   },
@@ -15,7 +20,7 @@ var config = {
     filename: 'buddle.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.vue$/,
         loader: 'vue-loader'
@@ -26,6 +31,15 @@ var config = {
           // 'style-loader',
           'vue-style-loader',
           'css-loader'
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          // 'style-loader',
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
         ]
       },
       {
