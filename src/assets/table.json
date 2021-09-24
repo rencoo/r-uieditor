@@ -1,0 +1,133 @@
+{
+  "type": "uieditor-div",
+  "children": [
+    {
+      "type": "uieditor-div",
+      "children": [
+        {
+          "type": "Button",
+          "children": [
+            {
+              "type": "Icon",
+              "props": {
+                "class": "mr-sm",
+                "type": "md-eye"
+              }
+            },
+            {
+              "type": "uieditor-text",
+              "props": {
+                "text": "设置全选"
+              }
+            }
+          ],
+          "props": {
+            "class": "mr-sm",
+            "@click": "handleSelectAll"
+          }
+        },
+        {
+          "type": "Button",
+          "children": [
+            {
+              "type": "Icon",
+              "props": {
+                "class": "mr-sm",
+                "type": "ios-eye-off"
+              }
+            },
+            {
+              "type": "uieditor-text",
+              "props": {
+                "text": "取消全选"
+              }
+            }
+          ],
+          "props": {
+            "class": "mr-sm",
+            "@click": "handleCancelSelectAll",
+            "style": "margin-left: 8px"
+          }
+        },
+        {
+          "type": "Button",
+          "children": [
+            {
+              "type": "Icon",
+              "props": {
+                "class": "mr-sm",
+                "type": "ios-exit-outline"
+              }
+            },
+            {
+              "type": "uieditor-text",
+              "props": {
+                "text": "导出数据"
+              }
+            }
+          ],
+          "props": {
+            "class": "mr-sm",
+            "@click": "handleExportData",
+            "style": "margin-left: 8px"
+          }
+        },
+        {
+          "type": "Input",
+          "props": {
+            "type": "text",
+            "placeholder": "请搜索",
+            "style": "width: 30%; float: right",
+            "v-model": "search"
+          }
+        }
+      ],
+      "props": {
+        "style": "margin-bottom: 16px;"
+      }
+    },
+    {
+      "type": "Table",
+      "props": {
+        "ref": "testTable",
+        ":data": "currentPageData",
+        ":columns": "tableCols",
+        ":stripe": "true",
+        ":border": "false",
+        ":show-header": "true",
+        ":loading": "isTableLoading",
+        "@on-selection-change": "handleSelectChange"
+      },
+      "children": [
+        {
+          "type": "template",
+          "props": {
+            "slot": "name",
+            "slot-scope": "{ row }"
+          },
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                "{{ row.name }}__slot"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Page",
+      "props": {
+        ":current": "currentPage",
+        ":total": "itemsCount",
+        ":page-size": "currentPageSize",
+        ":page-size-opts": "pageSizeOpts",
+        ":disabled": "false",
+        "@on-change": "handlePageChange",
+        "@on-page-size-change": "handlePageSizeChange",
+        "style": "margin: 10px; float: right;"
+      }
+    }
+  ]
+}

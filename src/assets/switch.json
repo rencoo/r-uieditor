@@ -1,0 +1,14 @@
+{
+  "type": "uieditor-div",
+  "children": [
+    {
+      "type": "i-switch",
+      "props": {
+        "v-model": "switchBl",
+        "true-value": "开",
+        "false-value": "关",
+        "@on-change": "onSwitchChange"
+      }
+    }
+  ]
+}

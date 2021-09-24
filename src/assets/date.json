@@ -1,0 +1,15 @@
+{
+  "type": "uieditor-div",
+  "children": [
+    {
+      "type": "DatePicker",
+      "props": {
+        "v-model": "dateData",
+        "style": "width:100%",
+        "type": "date",
+        "@on-change": "onDateChange",
+        "@on-clear": "onDateClear"
+      }
+    }
+  ]
+}

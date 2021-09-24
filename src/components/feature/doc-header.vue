@@ -24,13 +24,13 @@ export default {
 
 <style lang="scss" scoped>
 .doc-header {
-  min-width: 1500px;
+  min-width: 1200px;
   flex: 0 0 70px;
   height: 70px; // TODO:
   border-bottom: 1px solid #f1f4f8;
   .doc-header__inner {
     position: relative;
-    width: 1500px;
+    width: 1200px;
     height: 100%;
     display: flex;
     align-items: center;

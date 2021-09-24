@@ -1,0 +1,419 @@
+{
+  "type": "uieditor-div",
+  "children": [
+    {
+      "type": "Form",
+      "props": {
+        "ref": "testForm",
+        "class": "pt-lg",
+        ":model": "formData",
+        ":rules": "rules",
+        ":label-width": "120"
+      },
+      "children": [
+        {
+          "type": "Row",
+          "children": [
+            {
+              "type": "Col",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "type": "FormItem",
+                  "children": [
+                    {
+                      "type": "Input",
+                      "props": {
+                        "type": "text",
+                        "v-model": "formData.name"
+                      }
+                    }
+                  ],
+                  "props": {
+                    "label": "Name：",
+                    "prop": "name"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Col",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "type": "FormItem",
+                  "children": [
+                    {
+                      "type": "Input",
+                      "props": {
+                        "type": "text",
+                        "v-model": "formData.password"
+                      }
+                    }
+                  ],
+                  "props": {
+                    "label": "Password：",
+                    "prop": "password"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "type": "FormItem",
+                  "children": [
+                    {
+                      "type": "Select",
+                      "props": {
+                        "@on-change": "onSelectChange",
+                        "v-model": "formData.select"
+                      },
+                      "children": [
+                        {
+                          "type": "Option",
+                          "props": {
+                            "v-for": "item in optionList",
+                            ":value": "item.value",
+                            ":label": "item.value"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "props": {
+                    "label": "Select：",
+                    "prop": "select"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "type": "FormItem",
+                  "children": [
+                    {
+                      "type": "DatePicker",
+                      "props": {
+                        "style": "width:100%",
+                        "type": "date",
+                        "v-model": "formData.date",
+                        "@on-change": "onDateChange"
+                      }
+                    }
+                  ],
+                  "props": {
+                    "label": "DatePicker：",
+                    "prop": "date"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "type": "FormItem",
+                  "children": [
+                    {
+                      "type": "RadioGroup",
+                      "props": {
+                        "v-model": "formData.radio",
+                        "@on-change": "onRadioChange"
+                      },
+                      "children": [
+                        {
+                          "type": "Radio",
+                          "children": [
+                            {
+                              "type": "uieditor-text",
+                              "props": {
+                                "text": "Male",
+                                "ue-cant-move": true
+                              }
+                            }
+                          ],
+                          "props": {
+                            "label": "male"
+                          }
+                        },
+                        {
+                          "type": "Radio",
+                          "children": [
+                            {
+                              "type": "uieditor-text",
+                              "props": {
+                                "text": "Female",
+                                "ue-cant-move": true
+                              }
+                            }
+                          ],
+                          "props": {
+                            "label": "female"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "props": {
+                    "label": "Radio："
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "type": "FormItem",
+                  "children": [
+                    {
+                      "type": "CheckboxGroup",
+                      "props": {
+                        "v-model": "formData.checkbox"
+                      },
+                      "children": [
+                        {
+                          "type": "Checkbox",
+                          "children": [
+                            {
+                              "type": "uieditor-text",
+                              "props": {
+                                "text": "Eat",
+                                "ue-cant-move": true
+                              }
+                            }
+                          ],
+                          "props": {
+                            "label": "0"
+                          }
+                        },
+                        {
+                          "type": "Checkbox",
+                          "children": [
+                            {
+                              "type": "uieditor-text",
+                              "props": {
+                                "text": "Sleep",
+                                "ue-cant-move": true
+                              }
+                            }
+                          ],
+                          "props": {
+                            "label": "1"
+                          }
+                        },
+                        {
+                          "type": "Checkbox",
+                          "children": [
+                            {
+                              "type": "uieditor-text",
+                              "props": {
+                                "text": "Run",
+                                "ue-cant-move": true
+                              }
+                            }
+                          ],
+                          "props": {
+                            "label": "2"
+                          }
+                        },
+                        {
+                          "type": "Checkbox",
+                          "children": [
+                            {
+                              "type": "uieditor-text",
+                              "props": {
+                                "text": "Movie",
+                                "ue-cant-move": true
+                              }
+                            }
+                          ],
+                          "props": {
+                            "label": "3"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "props": {
+                    "label": "Checkbox：",
+                    "prop": "checkbox"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "type": "FormItem",
+                  "children": [
+                    {
+                      "type": "i-switch",
+                      "props": {
+                        "v-model": "formData.switch",
+                        "true-value": "1",
+                        "false-value": "0",
+                        "@on-change": "onSwitchChange"
+                      }
+                    }
+                  ],
+                  "props": {
+                    "label": "Switch：",
+                    "prop": "switch"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "type": "FormItem",
+                  "children": [
+                    {
+                      "type": "Slider",
+                      "props": {
+                        ":range": "true",
+                        "v-model": "formData.slider",
+                        "@on-change": "onSliderChange"
+                      }
+                    }
+                  ],
+                  "props": {
+                    "label": "Slider：",
+                    "prop": "slider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "type": "FormItem",
+                  "children": [
+                    {
+                      "type": "Input",
+                      "props": {
+                        "type": "textarea",
+                        ":rows": "3",
+                        "v-model": "formData.textarea",
+                        "@on-change": "onTextAreaChange"
+                      }
+                    }
+                  ],
+                  "props": {
+                    "label": "Text：",
+                    "prop": "textarea"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Col",
+              "props": {
+                "span": 24,
+                "ue-cant-move-child": true,
+                "ue-cant-movein": true,
+                "ue-cant-remove-child": true,
+                "ue-cant-copy-child": true
+              },
+              "children": [
+                {
+                  "type": "FormItem",
+                  "children": [
+                    {
+                      "type": "Button",
+                      "children": [
+                        {
+                          "type": "Icon",
+                          "props": {
+                            "class": "mr-sm",
+                            "type": "ios-heart-outline",
+                            "ue-cant-move": true
+                          }
+                        },
+                        {
+                          "type": "uieditor-text",
+                          "props": {
+                            "text": "Submit",
+                            "ue-cant-move": true
+                          }
+                        }
+                      ],
+                      "props": {
+                        "class": "mr-sm",
+                        "type": "primary",
+                        "@click": "onSubmit"
+                      }
+                    },
+                    {
+                      "type": "Button",
+                      "children": [
+                        {
+                          "type": "Icon",
+                          "props": {
+                            "class": "mr-sm",
+                            "type": "ios-heart-outline",
+                            "ue-cant-move": true
+                          }
+                        },
+                        {
+                          "type": "uieditor-text",
+                          "props": {
+                            "text": "Cancel",
+                            "ue-cant-move": true
+                          }
+                        }
+                      ],
+                      "props": {
+                        "class": "mr-sm",
+                        "style": "margin-left: 8px"
+                      }
+                    }
+                  ],
+                  "editor-attrs": {
+                    "label": ""
+                  }
+                }
+              ]
+            }
+          ],
+          "props": {
+            ":gutter": 16
+          }
+        }
+      ]
+    }
+  ]
+}

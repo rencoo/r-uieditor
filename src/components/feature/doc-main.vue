@@ -8,11 +8,11 @@
 
 <style lang="scss" scoped>
 .doc-main {
-  min-width: 1500px;
+  min-width: 1200px;
   height: 0;
   flex: 1 1;
   .doc-main__inner {
-    width: 1500px;
+    width: 1200px;
     height: 100%;
     display: flex;
     margin: 0 auto;

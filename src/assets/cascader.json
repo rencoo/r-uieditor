@@ -1,0 +1,13 @@
+{
+  "type": "uieditor-div",
+  "children": [
+    {
+      "type": "Cascader",
+      "props": {
+        "v-model": "cascaderValue",
+        ":data": "cascaderData",
+        "@on-change": "onCascaderChange"
+      }
+    }
+  ]
+}

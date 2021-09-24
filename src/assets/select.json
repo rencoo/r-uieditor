@@ -1,0 +1,22 @@
+{
+  "type": "uieditor-div",
+  "children": [
+    {
+      "type": "Select",
+      "props": {
+        "v-model": "selectData",
+        "@on-change": "onSelectChange"
+      },
+      "children": [
+        {
+          "type": "Option",
+          "props": {
+            "v-for": "item in optionList",
+            ":value": "item.value",
+            ":label": "item.value"
+          }
+        }
+      ]
+    }
+  ]
+}
