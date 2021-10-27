@@ -5,7 +5,7 @@
         <li v-for="item in 6"></li>
       </ul>
     </section> -->
-    <span class="doc-brand__name">HDF-EDITOR</span>
+    <span class="doc-brand__name">JSON组件</span>
   </div>
 </template>
 
